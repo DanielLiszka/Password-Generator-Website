@@ -1,5 +1,5 @@
-The included javascript starter code has been completed to allow for a generation of a password from 8 - 128 characters 
-with possible selection of lowercase, uppercase ,numeric, and special characters
+The included javascript starter code has been completed to allow for generation of a password from 8 - 128 characters 
+with possible selection of lowercase, uppercase, numeric, and special characters.
 
 Website: https://danielliszka.github.io/Password-Generator-Website/
 
