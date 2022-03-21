@@ -4,7 +4,6 @@ var lowercaseCharacters = "abcdefghijklmnopqrstuvwxyz";
 var uppercaseCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var numberCharacters = "0123456789";
 var specialCharacters = "~}|{`_^]\[@?>=<;:/.-,+*)('&%$#!";
-var finalstring = ""
 
 function input(){
     passwordLength = Number(prompt("Please choose a password length between 8 and 128"));
