@@ -50,7 +50,6 @@ function characters(){
   return finalstring
 }
 
-
 function RandomInteger(characterstring) {
   //find size of stored character string
   max_size = characterstring.length;
