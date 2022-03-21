@@ -1,9 +1,10 @@
 // Assignment code here
 
-var lowercaseCharcters = "abcdefghijklmnopqrstuvwxyz";
-var uppercaseCharcters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-var numberCharcters = "0123456789";
-var specialCharcters = "~}|{`_^]\[@?>=<;:/.-,+*)('&%$#!";
+var lowercaseCharacters = "abcdefghijklmnopqrstuvwxyz";
+var uppercaseCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var numberCharacters = "0123456789";
+var specialCharacters = "~}|{`_^]\[@?>=<;:/.-,+*)('&%$#!";
+var finalstring = ""
 
 function input(){
     passwordLength = Number(prompt("Please choose a password length between 8 and 128"));
@@ -18,13 +19,35 @@ function input(){
     while (passwordLength > 128){
       alert("password length must be no more than 128 numbers");
       passwordLength = Number(prompt("Please choose a password length between 8 and 128"));}
+    return passwordLength
+}   
 
+function characters(){
+  inputNumber = confirm("should it contain numbers?");
+  inputSpecialCharacters = confirm("should it contain special characters?");
+  inputUppercase = confirm("should it contain uppercase letters?");
+  inputLowercase = confirm("should it contain lowercase letters?");
+
+  while (inputNumber === false && inputSpecialCharacters === false && inputUppercase === false && inputLowercase === false){
+    alert("You must select one of the password criteria");
     inputNumber = confirm("should it contain numbers?");
-    inputSpecialCharcters = confirm("should it contain special charcters?")
+    inputSpecialCharacters = confirm("should it contain special characters?")
     inputUppercase = confirm("should it contain uppercase letters?")
     inputLowercase = confirm("should it contain lowercase letters?")
-     
-
+  }
+  if (inputNumber === true){
+    finalstring = finalstring.concat(numberCharacters);
+  }
+  if (inputSpecialCharacters === true){
+    finalstring = finalstring.concat(specialCharacters);
+  }
+  if (inputUppercase === true) {
+    finalstring = finalstring.concat(uppercaseCharacters);
+  }
+  if (inputLowercase === true){
+    finalstring = finalstring.concat(lowercaseCharacters);
+  }
+  return finalstring
 }
 
 function RandomInteger(max_num) {
@@ -32,7 +55,12 @@ function RandomInteger(max_num) {
 }
 
 function generatePassword() {
-  var password_input = input()
+  var password = "";
+  var charcter_length = input()
+  var characterstring = characters()
+
+
+
 }
 
 // Get references to the #generate element
