@@ -50,17 +50,21 @@ function characters(){
   return finalstring
 }
 
-function RandomInteger(max_num) {
-  return Math.floor(Math.random()*max_num);
+
+function RandomInteger(characterstring) {
+  //find size of stored character string
+  max_size = characterstring.length;
+  var value = Math.floor(Math.random()*max_size);
+  return value
 }
 
 function generatePassword() {
   var password = "";
-  var charcter_length = input()
+  var character_length = input()
   var characterstring = characters()
-
-
-
+  for (var i = 0; i < character_length; i++)
+    password += characterstring.charAt(RandomInteger(characterstring))
+  return password
 }
 
 // Get references to the #generate element
